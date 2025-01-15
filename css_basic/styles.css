@@ -1,64 +1,99 @@
-/* styles.css */
-
-/* Main content styles */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Reset styles for the layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styling for headings */
-h1, h2, h3 {
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-/* Style for paragraphs */
-p {
-    margin-bottom: 15px;
-}
-
-/* Styling for images */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
-/* Aside styling */
-aside {
-    background-color: #e2e2e2;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-/* Style for links in the articles */
-a {
+header .logo {
+    font-size: 40px;
     color: #0066cc;
+    font-weight: bold;
+    margin-right: 20px;
+    text-align: center;
+}
+
+header ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header a {
+    color: #fff;
     text-decoration: none;
 }
 
-a:hover {
+header a:hover {
     text-decoration: underline;
+}
+
+/* Article and Aside Background Styling */
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    background-color: #e2e2e2;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    body.works_on_smartphone {
+        display: block;
+    }
+
+    header ul {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    article, aside {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
 

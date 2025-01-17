@@ -1,4 +1,4 @@
-/* General Resets and Basic Styles */
+/* General Resets and Basic Styles (if not already included) */
 * {
     margin: 0;
     padding: 0;
@@ -11,107 +11,87 @@
     color: #333;
   }
   
-  /* Header Styles */
-  header {
+  /* Centralized Quote Section Styles */
+  .quote-section {
     width: 100%;
-    height: 80px; /* Adjust to the desired height */
-    background-color: #333; /* Set to the color in your Figma design */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px; /* Adjust padding */
-  }
-  
-  header .logo {
-    color: white;
-    font-size: 24px;
-  }
-  
-  header nav {
-    display: flex;
-  }
-  
-  header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-  }
-  
-  header nav a:hover {
-    color: #ccc; /* Hover effect */
-  }
-  
-  /* First Section Styles (Banner or Hero Section) */
-  section.banner {
-    width: 100%;
-    height: 500px; /* Adjust according to Figma file */
-    background-image: url('path/to/your-image.jpg'); /* Ensure this path is correct */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff; /* Set background color per Figma */
     text-align: center;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quote-section h2 {
+    font-size: 36px; /* Adjust to match Figma */
+    margin-bottom: 20px;
+    color: #333; /* Heading color */
+    font-weight: bold;
+  }
+  
+  .quote-section blockquote {
+    font-size: 24px; /* Adjust based on Figma */
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #666; /* Change to match design */
+    line-height: 1.6;
     position: relative;
   }
   
-  section.banner h1 {
-    font-size: 48px; /* Adjust to fit Figma design */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ensures text stands out on backgrounds */
+  .quote-section blockquote::before {
+    content: "“"; /* Start quote */
+    font-size: 50px;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    color: #ccc; /* Change to your Figma color */
   }
   
-  section.banner p {
-    font-size: 24px;
+  .quote-section blockquote::after {
+    content: "”"; /* End quote */
+    font-size: 50px;
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    color: #ccc; /* Change to your Figma color */
+  }
+  
+  .quote-section .author {
+    font-size: 20px; /* Adjust size based on Figma */
     margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: bold;
+    color: #333; /* Author's name color */
   }
   
-  /* Fixing Content Positioning */
-  .content {
-    margin-top: 20px;
-    padding: 20px;
+  /* Example of common button styling if there’s a call to action button in the quote section */
+  .quote-section .cta-button {
+    background-color: #007BFF; /* Change to Figma color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
   }
   
-  .content h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+  .quote-section .cta-button:hover {
+    background-color: #0056b3; /* Hover effect */
   }
   
-  .content p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* Make sure elements are not hidden */
-  .hidden {
-    display: block; /* Ensure this class isn't accidentally hiding content */
-  }
-  
-  .visible {
-    visibility: visible;
-  }
-  
-  /* Ensure Flexbox works well on smaller screens */
+  /* Responsive Design */
   @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
+    .quote-section h2 {
+      font-size: 28px;
     }
   
-    header nav {
-      flex-direction: column;
-      margin-top: 10px;
+    .quote-section blockquote {
+      font-size: 20px;
     }
   
-    section.banner h1 {
-      font-size: 36px;
-    }
-  
-    section.banner p {
+    .quote-section .author {
       font-size: 18px;
     }
   }

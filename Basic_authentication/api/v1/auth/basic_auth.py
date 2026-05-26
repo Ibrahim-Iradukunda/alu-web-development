@@ -67,4 +67,3 @@ class BasicAuth(Auth):
         user_creds = self.extract_user_credentials(decoded)
         return self.user_object_from_credentials(*user_creds)
 
-
